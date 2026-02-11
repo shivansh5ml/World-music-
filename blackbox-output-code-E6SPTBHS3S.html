@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Music Junction</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Welcome to My Music Junction</h1>
+        <nav>
+            <a href="#home">Home</a>
+            <a href="#library">Library</a>
+            <a href="#search">Search</a>
+            <a href="#contact">Contact</a>
+            <button onclick="createPlaylist()">Create Playlist</button>
+        </nav>
+    </header>
+    <main id="home">
+        <h2>Featured Tracks</h2>
+        <div id="genreFilter">
+            <button onclick="filterGenre('all')">All</button>
+            <button onclick="filterGenre('rock')">Rock</button>
+            <button onclick="filterGenre('pop')">Pop</button>
+            <button onclick="filterGenre('jazz')">Jazz</button>
+        </div>
+        <div id="tracks">
+            <div class="track" data-genre="rock">
+                <h3>Rock Song 1</h3>
+                <audio controls>
+                    <source src="assets/rock1.mp3" type="audio/mpeg">
+                    Your browser does not support the audio element.
+                </audio>
+                <a href="assets/rock1.mp3" download>Download</a>
+                <button onclick="getLyrics('Artist Name', 'Rock Song 1')">Get Lyrics</button>
+            </div>
+            <div class="track" data-genre="pop">
+                <h3>Pop Song 1</h3>
+                <audio controls>
+                    <source src="assets/pop1.mp3" type="audio/mpeg">
+                </audio>
+                <a href="assets/pop1.mp3" download>Download</a>
+                <button onclick="getLyrics('Artist Name', 'Pop Song 1')">Get Lyrics</button>
+            </div>
+            <div class="track" data-genre="jazz">
+                <h3>Jazz Song 1</h3>
+                <audio controls>
+                    <source src="assets/jazz1.mp3" type="audio/mpeg">
+                </audio>
+                <a href="assets/jazz1.mp3" download>Download</a>
+                <button onclick="getLyrics('Artist Name', 'Jazz Song 1')">Get Lyrics</button>
+            </div>
+            <!-- Add more tracks here as needed, e.g., <div class="track" data-genre="rock"><h3>Another Rock Song</h3><audio controls><source src="assets/another.mp3" type="audio/mpeg"></audio><a href="assets/another.mp3" download>Download</a><button onclick="getLyrics('Artist', 'Song')">Get Lyrics</button></div> -->
+        </div>
+        <h2>My Playlists</h2>
+        <div id="playlists">
+            <div class="playlist">
+                <h4>Chill Vibes</h4>
+                <ul>
+                    <li>Song A</li>
+                    <li>Song B</li>
+                </ul>
+            </div>
+            <!-- Add more playlists here as needed -->
+        </div>
+    </main>
+    <section id="library">
+        <h2>Music Library</h2>
+        <p>Browse all your tracks here. (Expand this section with more content if needed.)</p>
+    </section>
+    <section id="search">
+        <h2>Search Music</h2>
+        <input type="text" id="searchInput" placeholder="Search for songs...">
+        <button onclick="searchMusic()">Search</button>
+        <div id="results"></div>
+    </section>
+    <section id="contact">
+        <h2>Contact Us</h2>
+        <form action="mailto:your@email.com" method="post" enctype="text/plain">
+            <input type="text" name="name" placeholder="Your Name" required>
+            <input type="email" name="email" placeholder="Your Email" required>
+            <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
+            <button type="submit">Send Message</button>
+        </form>
+    </section>
+    <footer>
+        <p>&copy; 2023 My Music Junction. All rights reserved. (Add your own footer text.)</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
