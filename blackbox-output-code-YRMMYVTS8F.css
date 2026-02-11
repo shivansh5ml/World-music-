@@ -1,0 +1,211 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #121212; /* Dark background like music apps */
+    color: white;
+    line-height: 1.6;
+}
+
+header {
+    background-color: #1e1e1e;
+    padding: 1rem;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.5);
+}
+
+nav a {
+    color: #1db954; /* Green accent like Spotify */
+    margin: 0 1rem;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav a:hover {
+    color: #1aa34a;
+}
+
+nav button {
+    background: #1db954;
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-left: 1rem;
+}
+
+nav button:hover {
+    background: #1aa34a;
+}
+
+main, section {
+    padding: 2rem;
+    max-width: 800px;
+    margin: auto;
+}
+
+.track, .playlist {
+    margin-bottom: 1rem;
+    padding: 1rem;
+    background: #282828;
+    border-radius: 5px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.5);
+}
+
+.track h3, .playlist h4 {
+    margin-top: 0;
+}
+
+audio {
+    width: 100%;
+    margin-top: 0.5rem;
+}
+
+/* New: Download and Lyrics Buttons */
+.track a[download] {
+    color: #1db954;
+    text-decoration: none;
+    margin-left: 1rem;
+    font-weight: bold;
+}
+
+.track a[download]:hover {
+    color: #1aa34a;
+}
+
+.track button {
+    background: #1db954;
+    color: white;
+    border: none;
+    padding: 0.5rem;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-left: 0.5rem;
+}
+
+.track button:hover {
+    background: #1aa34a;
+}
+
+/* Genre Filter */
+#genreFilter {
+    margin-bottom: 1rem;
+}
+
+#genreFilter button {
+    margin: 0 0.5rem;
+    padding: 0.5rem 1rem;
+    background: #1db954;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+#genreFilter button:hover {
+    background: #1aa34a;
+}
+
+/* Playlists */
+.playlist ul {
+    list-style: none;
+    padding: 0;
+}
+
+.playlist li {
+    padding: 0.5rem 0;
+    border-bottom: 1px solid #444;
+}
+
+/* Search Section */
+#searchInput {
+    padding: 0.5rem;
+    width: 70%;
+    margin-right: 0.5rem;
+    border: 1px solid #444;
+    border-radius: 5px;
+    background: #282828;
+    color: white;
+}
+
+#search button {
+    padding: 0.5rem 1rem;
+    background: #1db954;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+#search button:hover {
+    background: #1aa34a;
+}
+
+#results p {
+    margin: 0.5rem 0;
+    padding: 0.5rem;
+    background: #282828;
+    border-radius: 5px;
+}
+
+/* New: Contact Form */
+#contact form {
+    display: flex;
+    flex-direction: column;
+}
+
+#contact input, #contact textarea {
+    margin-bottom: 1rem;
+    padding: 0.5rem;
+    border: 1px solid #444;
+    border-radius: 5px;
+    background: #282828;
+    color: white;
+}
+
+#contact button {
+    padding: 0.5rem 1rem;
+    background: #1db954;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+#contact button:hover {
+    background: #1aa34a;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 1rem;
+    background: #1e1e1e;
+    margin-top: 2rem;
+}
+
+/* Responsive Design for Mobile */
+@media (max-width: 600px) {
+    main, section {
+        padding: 1rem;
+    }
+    nav a, nav button {
+        display: block;
+        margin: 0.5rem 0;
+    }
+    #genreFilter button {
+        display: block;
+        width: 100%;
+        margin: 0.5rem 0;
+    }
+    #searchInput {
+        width: 100%;
+        margin-bottom: 0.5rem;
+    }
+    .track a[download], .track button {
+        display: block;
+        margin: 0.5rem 0;
+    }
+}
